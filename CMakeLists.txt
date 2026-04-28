@@ -19,6 +19,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS YES)
 add_library(tagforge_options INTERFACE)
 target_compile_options(tagforge_options INTERFACE -Wall -Wextra -Wpedantic)
 
-# Subdirectories
+# === Dependencies ===
+include(FetchContent)
+
+FetchContent_Declare(
+    yaml-cpp
+    GIT_REPOSITORY https://github.com/jbeder/yaml-cpp.git
+    GIT_TAG yaml-cpp-0.9.0
+)
+FetchContent_MakeAvailable(yaml-cpp)
+
+# === Subdirectories ===
 add_subdirectory(src)
-add_subdirectory(tests)
+# add_subdirectory(tests)

@@ -1,0 +1,31 @@
+# Commit Message Template (Conventional Style)
+#
+# Format:
+# <type>(<scope>): <short summary>
+#
+# Example:
+# feat(sensor): add initial TOF sensor support
+# fix(motor): correct direction reversal logic
+# docs(readme): add platform badges
+#
+# ----------------------------
+# <types>:
+# feat:     New feature
+# fix:      Bug fix
+# docs:     Documentation
+# style:    Formatting (no code logic changes)
+# refactor: Code change without behavior change
+# perf:     Performance improvement
+# test:     Added or updated tests
+# chore:    Build, tooling, infrastructure
+# build:    Build system or dependencies
+#
+# ----------------------------
+# <short summary>:
+# One line, max ~70 characters. Present tense. No period at the end.
+#
+# <body> (optional):
+# More details: what was done, why, and how
+#
+# <footer> (optional):
+# e.g. Closes #123, Relates to #456
