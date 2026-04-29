@@ -1,0 +1,20 @@
+type_name: "Motor_Variables"
+prefix: "Motor"
+count: 3  
+variables:
+  - name: speed
+    type: Int
+    comment: Current speed 
+  - name: running
+    type: Bool
+    comment: Motor running state
+  - name: direction
+    type: Bool
+    comment: Motor direction (true = forward)
+  - name: temperature
+    type: Real 
+    comment: Motor temperature
+  - name: brake_active
+    type: Bool
+    comment: True if active
+

@@ -18,7 +18,7 @@ static SclType parse_scl_type(const std::string &s) {
 
 Config load_config(const std::filesystem::path &config_path) {
   YAML::Node node = YAML::LoadFile(config_path.string());
-  if (!node["type_name"]) {
+  if (!node["type_name"] || node["type_name"].IsNull()) {
     throw std::runtime_error("Missing required field: type_name");
   }
 
