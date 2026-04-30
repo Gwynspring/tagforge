@@ -3,9 +3,14 @@
 #include <filesystem>
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
 
-  std::filesystem::path file_path = "./examples/motor.yaml";
+  if (argc < 2) {
+    std::cerr << "tagforge: missing input file!\n";
+    return EXIT_FAILURE;
+  }
+
+  std::filesystem::path file_path = argv[1];
   try {
     Config cfg = load_config(file_path);
     std::cout << "File successfully loaded\r\n";
