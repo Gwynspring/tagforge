@@ -29,6 +29,12 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(yaml-cpp)
 
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+FetchContent_MakeAvailable(googletest)
+
 # === Subdirectories ===
 add_subdirectory(src)
-# add_subdirectory(tests)
+add_subdirectory(tests)
