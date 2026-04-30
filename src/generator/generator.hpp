@@ -1,3 +1,7 @@
 #pragma once
 
-// Generator implementation comes next
+#include "config.hpp"
+
+namespace Generator {
+std::string generate(const Config &cfg);
+} // namespace Generator

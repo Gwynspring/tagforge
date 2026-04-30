@@ -22,15 +22,17 @@ Config load_config(const std::filesystem::path &config_path) {
     throw std::runtime_error("Missing required field: type_name");
   }
 
+  if (!node["prefix"] || node["prefix"].IsNull()) {
+    throw std::runtime_error("Missing required field: prefix");
+  }
+
   if (!node["variables"]) {
     throw std::runtime_error("Missing required field: variables");
   }
 
   Config cfg;
   cfg.type_name = node["type_name"].as<std::string>();
-  if (node["prefix"]) {
-    cfg.prefix = node["prefix"].as<std::string>();
-  }
+  cfg.prefix = node["prefix"].as<std::string>();
 
   if (node["count"]) {
     int count = node["count"].as<int>();

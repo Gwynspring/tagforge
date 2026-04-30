@@ -1,6 +1,6 @@
 type_name: "Motor_Variables"
 prefix: "Motor"
-count: 3  
+count: 1  
 variables:
   - name: speed
     type: Int
